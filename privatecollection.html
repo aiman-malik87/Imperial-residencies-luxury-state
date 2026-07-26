@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Browse all luxury properties currently available" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Private Collection - Imperial Residencies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg">
+        <div class="container-fluid">
+            <img src="logo.png" alt="Logo" width="160" height="90" class="d-inline-block align-text-top mx-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="properties.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Properties</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="listing.html">All Listings</a></li>
+                            <li><a class="dropdown-item" href="privatecollection.html">Private Collection
+                                    (off-market)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-black" href="neighboured.html">Neighborhoods</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="advisors.html">Advisors</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="journal.html">Journal</a></li>
+                </ul>
+                <a href="contact.html" class="nav-btn mx-3">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- hero sec -->
+
+    <section class="listing-hero">
+
+        <img src="assests/privatecollection images/hero img.jfif" alt="Private Collection hero background">
+        <div class="overlay"></div>
+
+        <span class="eyebrow">By Invitation Only</span>
+        <h1>The Private Collection</h1>
+        <div class="listing-count" id="listing-count-text">Off-market residences available exclusively to verified
+            buyers</div>
+    </section>
+
+    <!-- cards sec -->
+    <div id="listing-container">
+
+        <div class="listing-row mt-3" data-type="villa" data-status="for sale" data-price="2450000" data-beds="5"
+            data-location="clifton seafront villa">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/emaar crown villa.jfif" alt="Emar crown villa">
+                <span class="row-tag">For Sale</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Emaar Crown Villa</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i> DHA Phase 8, Karachi</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>5 Beds</span><span><i class="fas fa-bath"></i>6
+                        Baths</span><span><i class="fas fa-vector-square"></i>6,200 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="penthouse" data-status="for rent" data-price="106800" data-beds="3"
+            data-location="dha skyline penthouse">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/regency suite.jfif" alt="Regency Sky Suite">
+                <span class="row-tag">For Rent</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Regency Sky Suite</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Gulberg, Lahore</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>3 Beds</span><span><i class="fas fa-bath"></i>4
+                        Baths</span><span><i class="fas fa-vector-square"></i>3,100 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="estate" data-status="new development" data-price="5120000" data-beds="6"
+            data-location="bahria hills estate">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/grand view manor.jfif" alt="The Grandview Manor">
+                <span class="row-tag">New Development</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">The Grandview Manor</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Bahria Enclave, Islamabad</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>6 Beds</span><span><i class="fas fa-bath"></i>7
+                        Baths</span><span><i class="fas fa-vector-square"></i>8,400 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="house" data-status="for sale" data-price="890000" data-beds="4"
+            data-location="phase 6 dha house">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/heritage court.jfif" alt="Heritage Court Residence">
+                <span class="row-tag">For Sale</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Heritage Court Residence</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Phase 8, DHA Karachi</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>4 Beds</span><span><i class="fas fa-bath"></i>4
+                        Baths</span><span><i class="fas fa-vector-square"></i>3,800 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="villa" data-status="for rent" data-price="66000" data-beds="4"
+            data-location="waterfront villa clifton">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/azure by retreat.jfif" alt="Azure Bay Retreat">
+                <span class="row-tag">For Rent</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Azure Bay Retreat</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Emaar Waterfront, Karachi</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>4 Beds</span><span><i class="fas fa-bath"></i>5
+                        Baths</span><span><i class="fas fa-vector-square"></i>4,900 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="penthouse" data-status="new development" data-price="3600000" data-beds="3"
+            data-location="saddar tower penthouse">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/residence meridian.jpg" alt="The Meridian Residence">
+                <span class="row-tag">New Development</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">The Meridian Residence</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i></p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>3 Beds</span><span><i class="fas fa-bath"></i>3
+                        Baths</span><span><i class="fas fa-vector-square"></i>2,900 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="estate" data-status="for sale" data-price="8750000" data-beds="7"
+            data-location="greenwich garden estate">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/rooswood residence.jpg" alt="Rosewood Private Estate">
+                <span class="row-tag">For Sale</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Rosewood Private Estate</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Greenwich, CTZd</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>7 Beds</span><span><i class="fas fa-bath"></i>8
+                        Baths</span><span><i class="fas fa-vector-square"></i>10,500 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="house" data-status="for rent" data-price="42000" data-beds="4"
+            data-location="aspen contemporary retreat">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/Murree Hills, Punjab.jpg" alt=" Alpine Signature Lodge">
+                <span class="row-tag">For Rent</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif"> Alpine Signature Lodge</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Murree Hills, Punjab</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>4 Beds</span><span><i class="fas fa-bath"></i>4
+                        Baths</span><span><i class="fas fa-vector-square"></i>4,700 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="villa" data-status="new development" data-price="4250000" data-beds="5"
+            data-location="hillside modern estate">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/The Summit Collection Villa.jfif"
+                    alt="The Summit Collection Villa">
+                <span class="row-tag">New Development</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">The Summit Collection Villa</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Beverly Hills, CA</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>5 Beds</span><span><i class="fas fa-bath"></i>6
+                        Baths</span><span><i class="fas fa-vector-square"></i>6,200 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="penthouse" data-status="for sale" data-price="1890000" data-beds="2"
+            data-location="miami downtown sky residence">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/Vertex Private Residence.jpg" alt="Vertex Private Residence">
+                <span class="row-tag">For Sale</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Vertex Private Residence</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>Clifton Block 5, Karachi</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>2 Beds</span><span><i class="fas fa-bath"></i>2
+                        Baths</span><span><i class="fas fa-vector-square"></i>2,050 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="estate" data-status="for rent" data-price="24000" data-beds="6"
+            data-location="malibu oceanfront villa">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/Coral Coast Estate.jfif" alt="Coral Coast Estate">
+                <span class="row-tag">For Rent</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">Coral Coast Estate</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i> Emaar Beachfront, Karachi</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>6 Beds</span><span><i class="fas fa-bath"></i>7
+                        Baths</span><span><i class="fas fa-vector-square"></i>8,400 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+        <div class="listing-row" data-type="house" data-status="new development" data-price="3150000" data-beds="3"
+            data-location="manhattan skyline penthouse">
+            <div class="row-img-wrap">
+                <img src="assests/privatecollection images/The Zenith Suite.jfif" alt="The Zenith Suite">
+                <span class="row-tag">New Development</span>
+            </div>
+            <div class="row-body">
+                <div class="row-price">Price On Request</div>
+                <div class="row-title serif">The Zenith Suite</div>
+                <p class="row-location"><i class="fas fa-map-marker-alt"></i>F-7 Islamabad</p>
+                <div class="row-meta"><span><i class="fas fa-bed"></i>3 Beds</span><span><i class="fas fa-bath"></i>3
+                        Baths</span><span><i class="fas fa-vector-square"></i>3,100 sqft</span></div>
+                <a href="#pc-form" class="row-btn">Request Access</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Request Access Form -->
+    <section id="pc-form" class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="pc-form-wrap">
+                    <h2 class="text-center">Request Private Access</h2>
+                    <p class="text-center pc-form-sub">Complete this form and our team will verify your request within
+                        24 hours.</p>
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="Full Name" required>
+                        <input type="email" class="form-control mb-3" placeholder="Email Address" required>
+                        <input type="tel" class="form-control mb-3" placeholder="Phone Number" required>
+                        <select class="form-control mb-3" required>
+                            <option value="">I am a...</option>
+                            <option value="buyer">Buyer</option>
+                            <option value="agent">Agent</option>
+                            <option value="investor">Investor</option>
+                        </select>
+                        <select class="form-control mb-3">
+                            <option value="">Budget Range</option>
+                            <option value="1-3m">$1M - $3M</option>
+                            <option value="3-6m">$3M - $6M</option>
+                            <option value="6m+">$6M+</option>
+                        </select>
+                        <textarea class="form-control mb-3" rows="4"
+                            placeholder="Tell us what you're looking for"></textarea>
+                        <button type="submit" class="contact-btn w-100">Request Private Access</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer sec -->
+    <section class="footer-sec">
+        <div class="container">
+            <div class="row footer-row-margin">
+                <div class="col-lg-4 col-sm-12 footer-content">
+                    <h2>Imperial Residencies</h2>
+                    <span>INTERNATIONAL REAL STATE</span>
+                    <P>Your connection to the finest homes and experiences no matter the destination or lifestyle.</P>
+                    <h3>NEVER MISS A MOMENT OF LUXURY</h3>
+                    <div class="footer-social-links   gap-4">
+                        <a href="https://github.com/aiman-malik87" target="_blank"><i
+                                class="fa-brands fa-github text-light fs-2"></i></a>
+                        <a href="#" target="_blank"> <i class="fa-brands fa-instagram text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-tiktok text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook-f text-light fs-2"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 col-sm-12 footer-img">
+                    <img src="assests/footer img.avif" class="img-fluid" alt="footer img">
+                </div>
+            </div>
+
+            <div class="row footer-sec2 g-4">
+                <div class="col-12 footer-social-links">
+                    <a href="advisors.html">Advisors</a>
+                    <a href="listing.html">All Listings</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="neighboured.html">Neighboured</a>
+                    <a href="sell.html">Sell Us</a>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row footer-bottom">
+
+                <div class="col-lg-12 text-center">
+                    <h3 class="footer-bottom-heading">Imperial Residencies</h3>
+                    <p class="copyright">
+                        © 2026 Imperial Residencies. All Rights Reserved.
+                        Each office is independently owned and operated.
+                    </p>
+
+                    <p class="disclaimer">
+                        All information presented on this website is believed to be accurate and reliable.
+                        However, property details, pricing, availability, and specifications are subject
+                        to change without prior notice. Imperial Residencies makes no representation or
+                        warranty regarding the completeness or accuracy of the information provided and
+                        recommends independent verification before making any property decisions.
+                    </p>
+
+                    <p class="policy">
+                        Imperial Residencies is committed to providing equal housing opportunities and
+                        maintaining the highest standards of professionalism, transparency, and client service.
+                    </p>
+
+                    <div class="footer-icons">
+                        <i class="fa-solid fa-house"></i>
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                </div>
+                <a href="#" class="scroll-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

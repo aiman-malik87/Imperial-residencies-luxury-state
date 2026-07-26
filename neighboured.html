@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description"
+    content="Explore prime neighborhoods and luxury property locations with Imperial Residencies" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Neighborhoods | Imperial Residencies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- navbar sec -->
+  <nav class="navbar navbar-expand-lg bg">
+    <div class="container-fluid">
+      <img src="logo.png" alt="Logo" width="160" height="90" class="d-inline-block align-text-top mx-5">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-black" href="properties.html" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Properties</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="listing.html">All Listings</a></li>
+              <li><a class="dropdown-item" href="privatecollection.html">Private Collection (off-market)</a></li>
+              <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link text-black active" aria-current="page"
+              href="neighboured.html">Neighborhoods</a></li>
+          <li class="nav-item"><a class="nav-link text-black" href="advisors.html">Advisors</a></li>
+          <li class="nav-item"><a class="nav-link text-black" href="journal.html">Journal</a></li>
+        </ul>
+        <a href="contact.html" class="nav-btn mx-3">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero sec -->
+  <section class="neighboured-hero">
+    <div class="neighbouredhero-overlay"></div>
+
+    <div class="neighbouredhero-content">
+      <span class="neighbouredeyebrow">GLOBAL DESTINATIONS</span>
+
+      <h1>Luxury Neighborhoods</h1>
+
+      <p>
+        Explore prestigious communities and discover exceptional homes
+        in the world's most desirable locations.
+      </p>
+    </div>
+  </section>
+
+  <!-- filter bar -->
+  <section class="filter-bar container-fluid px-5">
+    <input type="text" id="n-search" placeholder="Search by city or region">
+    <select id="n-sort">
+      <option value="default">Sort: Featured</option>
+      <option value="alpha-asc">Name: A to Z</option>
+      <option value="alpha-desc">Name: Z to A</option>
+      <option value="count-desc">Most Listings</option>
+    </select>
+    <button class="filter-apply-btn" onclick="applyNeighbourFilters()">Apply</button>
+    <button class="filter-reset" onclick="resetNeighbourFilters()">Reset</button>
+  </section>
+
+  <!-- neighbourhoods sec -->
+  <div class="container neighboured-section">
+    <div class="neighboured-heading-wrap">
+      <h2 class="neighboured-heading">Explore Prime Neighborhoods</h2>
+      <span class="neighboured-subtitle">Find luxury homes in the most desirable locations</span>
+    </div>
+
+    <div class="row g-4" id="neighboured-grid">
+
+      <div class="col-lg-4 col-md-6 col-sm-12 neighboured-col" data-name="karachi" data-count="120">
+        <div class="neighboured-card">
+          <div class="neighboured-img-wrap">
+            <img src="assests/neighboured images/khi img.jfif" class="card-img-top" alt="Karachi image">
+            <span class="location-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Pakistan
+            </span>
+          </div>
+
+          <div class="neighboured-body">
+            <h4 class="neighboured-title">Karachi</h4>
+            <p class="neighboured-text pt-3">
+              Discover waterfront residences, luxury penthouses, and exclusive gated communities in Pakistan's financial
+              capital.
+            </p>
+
+            <div class="neighbour-info">
+              <span><i class="fa-solid fa-house"></i> 120 Listings</span>
+              <span><i class="fa-solid fa-star"></i> Premium Area</span>
+            </div>
+
+            <a href="listing.html" class="neighboured-btn">
+              View Listings
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 neighboured-col" data-name="islamabad" data-count="70">
+        <div class="neighboured-card">
+          <div class="neighboured-img-wrap">
+            <img src="assests/neighboured images/islmabad img.jfif" class="card-img-top" alt="Islamabad image">
+            <span class="location-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Islamabad
+            </span>
+          </div>
+          <div class="neighboured-body">
+            <h4 class="neighboured-title">Islamabad</h4>
+             <p class="neighboured-text pt-3">
+             Experience peaceful surroundings, diplomatic sectors, and premium hillside residences.
+            </p>
+
+            <div class="neighbour-info">
+              <span><i class="fa-solid fa-house"></i> 170 Listings</span>
+              <span><i class="fa-solid fa-star"></i> Premium Area</span>
+            </div>
+
+            <a href="listing.html" class="neighboured-btn">
+              View Listings
+            </a>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 neighboured-col" data-name="abu dhabi" data-count="90">
+        <div class="neighboured-card">
+          <div class="neighboured-img-wrap">
+            <img src="assests/neighboured images/abu dhabi img.jfif" class="card-img-top" alt="Abu Dhabi image">
+            <span class="location-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Abu Dhabi
+            </span>
+          </div>
+          <div class="neighboured-body">
+            <h5 class="neighboured-title">Abu Dhabi</h5>
+             <p class="neighboured-text pt-3">
+           Exclusive island communities, beachfront estates, and sophisticated urban living.
+            </p>
+
+            <div class="neighbour-info">
+              <span><i class="fa-solid fa-house"></i> 90 Listings</span>
+              <span><i class="fa-solid fa-star"></i> Premium Area</span>
+            </div>
+
+            <a href="listing.html" class="neighboured-btn">
+              View Listings
+            </a>
+           
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 neighboured-col" data-name="lahore" data-count="150">
+        <div class="neighboured-card">
+          <div class="neighboured-img-wrap">
+            <img src="assests/neighboured images/lhr img.jfif" class="card-img-top" alt="Lahore image">
+            <span class="location-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Lahore
+            </span>
+          </div>
+          <div class="neighboured-body">
+            <h5 class="neighboured-title">Lahore</h5>
+             <p class="neighboured-text pt-3">
+             Elegant villas, heritage-inspired homes, and modern luxury communities in the cultural heart of Pakistan.
+            </p>
+
+            <div class="neighbour-info">
+              <span><i class="fa-solid fa-house"></i> 160 Listings</span>
+              <span><i class="fa-solid fa-star"></i> Premium Area</span>
+            </div>
+
+            <a href="listing.html" class="neighboured-btn">
+              View Listings
+            </a>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 neighboured-col" data-name="dubai" data-count="60">
+        <div class="neighboured-card">
+          <div class="neighboured-img-wrap">
+            <img src="assests/neighboured images/dubai img" class="card-img-top" alt="Dubai image">
+            <span class="location-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Dubai
+            </span>
+          </div>
+          <div class="neighboured-body">
+            <h5 class="neighboured-title">Dubai</h5>
+            <p class="neighboured-text pt-3">
+              World-class waterfront apartments, iconic skyscrapers, and luxury villas with unmatched lifestyle.
+            </p>
+
+            <div class="neighbour-info">
+              <span><i class="fa-solid fa-house"></i> 120 Listings</span>
+              <span><i class="fa-solid fa-star"></i> Premium Area</span>
+            </div>
+
+            <a href="listing.html" class="neighboured-btn">
+              View Listings
+            </a>
+           
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 neighboured-col" data-name="london" data-count="120">
+        <div class="neighboured-card">
+          <div class="neighboured-img-wrap">
+            <img src="assests/neighboured images/landon img.webp" class="card-img-top" alt="London image">
+            <span class="location-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Landon
+            </span>
+          </div>
+          <div class="neighboured-body">
+            <h4 class="neighboured-title">London</h4>
+            <p class="neighboured-text pt-3">
+             Timeless townhouses, luxury apartments, and prestigious residences in the world's leading financial city.
+            </p>
+
+            <div class="neighbour-info">
+              <span><i class="fa-solid fa-house"></i> 50 Listings</span>
+              <span><i class="fa-solid fa-star"></i> Premium Area</span>
+            </div>
+
+            <a href="listing.html" class="neighboured-btn">
+              View Listings
+            </a>
+           
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-results" id="n-no-results">No neighborhoods match your search — try resetting the filters.</div>
+  </div>
+
+  <!-- footer sec -->
+  <section class="footer-sec">
+    <div class="container">
+      <div class="row footer-row-margin">
+        <div class="col-lg-4 col-sm-12 footer-content">
+          <h2>Imperial Residencies</h2>
+          <span>INTERNATIONAL REAL STATE</span>
+          <P>Your connection to the finest homes and experiences no matter the destination or lifestyle.</P>
+          <h3>NEVER MISS A MOMENT OF LUXURY</h3>
+          <div class="footer-social-links gap-4">
+            <a href="https://github.com/aiman-malik87" target="_blank"><i
+                class="fa-brands fa-github text-light fs-2"></i></a>
+            <a href="#" target="_blank"> <i class="fa-brands fa-instagram text-light fs-2"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-tiktok text-light fs-2"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in text-light fs-2"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f text-light fs-2"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12 footer-img">
+          <img src="assests/footer img.avif" class="img-fluid" alt="footer img">
+        </div>
+      </div>
+
+      <div class="row footer-sec2 g-4">
+        <div class="col-12 footer-social-links">
+          <a href="advisors.html">Advisors</a>
+          <a href="listing.html">All Listings</a>
+          <a href="journal.html">Journal</a>
+          <a href="neighboured.html">Neighboured</a>
+          <a href="sell.html">Sell Us</a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="row footer-bottom">
+        <div class="col-lg-12 text-center">
+          <h3 class="footer-bottom-heading">Imperial Residencies</h3>
+          <p class="copyright">
+            © 2026 Imperial Residencies. All Rights Reserved.
+            Each office is independently owned and operated.
+          </p>
+
+          <p class="disclaimer">
+            All information presented on this website is believed to be accurate and reliable.
+            However, property details, pricing, availability, and specifications are subject
+            to change without prior notice. Imperial Residencies makes no representation or
+            warranty regarding the completeness or accuracy of the information provided and
+            recommends independent verification before making any property decisions.
+          </p>
+
+          <p class="policy">
+            Imperial Residencies is committed to providing equal housing opportunities and
+            maintaining the highest standards of professionalism, transparency, and client service.
+          </p>
+
+          <div class="footer-icons">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+        </div>
+        <a href="#" class="scroll-top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function applyNeighbourFilters() {
+      const search = document.getElementById('n-search').value.trim().toLowerCase();
+      const sort = document.getElementById('n-sort').value;
+
+      const grid = document.getElementById('neighboured-grid');
+      const cards = Array.from(grid.querySelectorAll('.neighboured-col'));
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const name = card.dataset.name;
+        const matches = !search || name.includes(search);
+        card.classList.toggle('is-hidden', !matches);
+        if (matches) visibleCount++;
+      });
+
+      if (sort !== 'default') {
+        const visibleCards = cards.filter(c => !c.classList.contains('is-hidden'));
+        visibleCards.sort((a, b) => {
+          if (sort === 'alpha-asc') return a.dataset.name.localeCompare(b.dataset.name);
+          if (sort === 'alpha-desc') return b.dataset.name.localeCompare(a.dataset.name);
+          if (sort === 'count-desc') return parseInt(b.dataset.count, 10) - parseInt(a.dataset.count, 10);
+          return 0;
+        });
+        visibleCards.forEach(c => grid.appendChild(c));
+      }
+
+      document.getElementById('n-no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    function resetNeighbourFilters() {
+      document.getElementById('n-search').value = '';
+      document.getElementById('n-sort').value = 'default';
+      applyNeighbourFilters();
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

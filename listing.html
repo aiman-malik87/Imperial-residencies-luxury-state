@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Browse all luxury properties currently available"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>All Listings - Imperial Residencies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg">
+  <div class="container-fluid">
+    <img src="logo.png" alt="Logo" width="160" height="90" class="d-inline-block align-text-top mx-5">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-black" href="properties.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Properties</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="listing.html">All Listings</a></li>
+            <li><a class="dropdown-item" href="privatecollection.html">Private Collection (off-market)</a></li>
+            <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link text-black" href="neighboured.html">Neighborhoods</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="advisors.html">Advisors</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="journal.html">Journal</a></li>
+      </ul>
+      <a href="contact.html" class="nav-btn mx-3">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<section class="listing-hero">
+  <span class="eyebrow">Complete Portfolio</span>
+  <h1>All Listings</h1>
+  <div class="listing-count" id="listing-count-text">12 residences currently available</div>
+</section>
+
+<div class="container-fluid px-5">
+  <div class="listing-layout">
+
+    <aside class="listing-sidebar">
+      <h5>Refine Search</h5>
+
+      <div class="sidebar-group">
+        <label class="group-title">Keyword</label>
+        <input type="text" id="f-search" placeholder="Location or keyword">
+      </div>
+
+      <div class="sidebar-group">
+        <label class="group-title">Property type</label>
+        <label class="sidebar-check"><input type="radio" name="ftype" value="" checked> All types</label>
+        <label class="sidebar-check"><input type="radio" name="ftype" value="villa"> Villa</label>
+        <label class="sidebar-check"><input type="radio" name="ftype" value="penthouse"> Penthouse</label>
+        <label class="sidebar-check"><input type="radio" name="ftype" value="estate"> Estate</label>
+        <label class="sidebar-check"><input type="radio" name="ftype" value="house"> House</label>
+      </div>
+
+      <div class="sidebar-group">
+        <label class="group-title">Status</label>
+        <label class="sidebar-check"><input type="radio" name="fstatus" value="" checked> Any status</label>
+        <label class="sidebar-check"><input type="radio" name="fstatus" value="for sale"> For Sale</label>
+        <label class="sidebar-check"><input type="radio" name="fstatus" value="for rent"> For Rent</label>
+        <label class="sidebar-check"><input type="radio" name="fstatus" value="new development"> New Development</label>
+      </div>
+
+      <div class="sidebar-group">
+        <label class="group-title">Price range</label>
+        <select id="f-price">
+          <option value="">Any price</option>
+          <option value="0-1000000">Under $1M</option>
+          <option value="1000000-3000000">$1M - $3M</option>
+          <option value="3000000-999999999">$3M+</option>
+        </select>
+      </div>
+
+      <div class="sidebar-group">
+        <label class="group-title">Bedrooms</label>
+        <select id="f-beds">
+          <option value="0">Any</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+          <option value="5">5+</option>
+        </select>
+      </div>
+
+      <button class="sidebar-apply-btn" onclick="applyFilters()">Apply filters</button>
+      <button class="sidebar-reset-btn" onclick="resetFilters()">Reset all</button>
+    </aside>
+
+    <main class="listing-main">
+      <div class="listing-toolbar">
+        <span class="results-text" id="results-text">Showing 12 of 12 properties</span>
+        <select id="f-sort" onchange="applyFilters()">
+          <option value="default">Sort: Newest</option>
+          <option value="asc">Price: low to high</option>
+          <option value="desc">Price: high to low</option>
+        </select>
+      </div>
+
+      <div id="listing-container">
+
+        <div class="listing-row" data-type="villa" data-status="for sale" data-price="2450000" data-beds="5" data-location="clifton seafront villa">
+          <div class="row-img-wrap">
+            <img src="assests/listing img/clifton villa.jfif" alt="Modern villa">
+            <span class="row-tag">For Sale</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$2,450,000</div>
+            <div class="row-title serif">Clifton Seafront Villa</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Clifton, Karachi</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>5 Beds</span><span><i class="fas fa-bath"></i>6 Baths</span><span><i class="fas fa-vector-square"></i>6,200 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="penthouse" data-status="for rent" data-price="106800" data-beds="3" data-location="dha skyline penthouse">
+          <div class="row-img-wrap">
+            <img src="assests/listing img/penthouse.jfif" alt="Penthouse">
+            <span class="row-tag">For Rent</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$8,900 / mo</div>
+            <div class="row-title serif">DHA Skyline Penthouse</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>DHA, Karachi</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>3 Beds</span><span><i class="fas fa-bath"></i>4 Baths</span><span><i class="fas fa-vector-square"></i>3,100 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="estate" data-status="new development" data-price="5120000" data-beds="6" data-location="bahria hills estate">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800" alt="Estate">
+            <span class="row-tag">New Development</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$5,120,000</div>
+            <div class="row-title serif">Bahria Hills Estate</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Bahria Town, Karachi</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>6 Beds</span><span><i class="fas fa-bath"></i>7 Baths</span><span><i class="fas fa-vector-square"></i>8,400 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="house" data-status="for sale" data-price="890000" data-beds="4" data-location="phase 6 dha house">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="House">
+            <span class="row-tag">For Sale</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$890,000</div>
+            <div class="row-title serif">Phase 6 Family House</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Phase 6, DHA</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>4 Beds</span><span><i class="fas fa-bath"></i>4 Baths</span><span><i class="fas fa-vector-square"></i>3,800 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="villa" data-status="for rent" data-price="66000" data-beds="4" data-location="waterfront villa clifton">
+          <div class="row-img-wrap">
+            <img src="assests/listing img/waterfront-villa.jpg" alt="Waterfront villa">
+            <span class="row-tag">For Rent</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$5,500 / mo</div>
+            <div class="row-title serif">Waterfront Boutique Villa</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Clifton, Karachi</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>4 Beds</span><span><i class="fas fa-bath"></i>5 Baths</span><span><i class="fas fa-vector-square"></i>4,900 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="penthouse" data-status="new development" data-price="3600000" data-beds="3" data-location="saddar tower penthouse">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800" alt="New penthouse">
+            <span class="row-tag">New Development</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$3,600,000</div>
+            <div class="row-title serif">Saddar Tower Penthouse</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Saddar, Karachi</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>3 Beds</span><span><i class="fas fa-bath"></i>3 Baths</span><span><i class="fas fa-vector-square"></i>2,900 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="estate" data-status="for sale" data-price="8750000" data-beds="7" data-location="greenwich garden estate">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?w=800" alt="Grand estate">
+            <span class="row-tag">For Sale</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$8,750,000</div>
+            <div class="row-title serif">Grand Garden Estate</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Greenwich, CT</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>7 Beds</span><span><i class="fas fa-bath"></i>8 Baths</span><span><i class="fas fa-vector-square"></i>10,500 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="house" data-status="for rent" data-price="42000" data-beds="4" data-location="aspen contemporary retreat">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800" alt="Contemporary house">
+            <span class="row-tag">For Rent</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$3,500 / mo</div>
+            <div class="row-title serif">Aspen Contemporary Retreat</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Aspen, CO</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>4 Beds</span><span><i class="fas fa-bath"></i>4 Baths</span><span><i class="fas fa-vector-square"></i>4,700 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="villa" data-status="new development" data-price="4250000" data-beds="5" data-location="hillside modern estate">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800" alt="Hillside villa">
+            <span class="row-tag">New Development</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$4,250,000</div>
+            <div class="row-title serif">Hillside Modern Estate</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Beverly Hills, CA</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>5 Beds</span><span><i class="fas fa-bath"></i>6 Baths</span><span><i class="fas fa-vector-square"></i>6,200 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="penthouse" data-status="for sale" data-price="1890000" data-beds="2" data-location="miami downtown sky residence">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800" alt="Downtown residence">
+            <span class="row-tag">For Sale</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$1,890,000</div>
+            <div class="row-title serif">Downtown Sky Residence</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Miami, FL</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>2 Beds</span><span><i class="fas fa-bath"></i>2 Baths</span><span><i class="fas fa-vector-square"></i>2,050 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="estate" data-status="for rent" data-price="24000" data-beds="6" data-location="malibu oceanfront villa">
+          <div class="row-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800" alt="Oceanfront villa">
+            <span class="row-tag">For Rent</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$18,000 / mo</div>
+            <div class="row-title serif">Malibu Oceanfront Villa</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Malibu, CA</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>6 Beds</span><span><i class="fas fa-bath"></i>7 Baths</span><span><i class="fas fa-vector-square"></i>8,400 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+        <div class="listing-row" data-type="house" data-status="new development" data-price="3150000" data-beds="3" data-location="manhattan skyline penthouse">
+          <div class="row-img-wrap">
+            <img src="assests/listing img/skylinee penthouse.webp" alt="Skyline penthouse">
+            <span class="row-tag">New Development</span>
+          </div>
+          <div class="row-body">
+            <div class="row-price">$3,150,000</div>
+            <div class="row-title serif">Skyline Penthouse</div>
+            <p class="row-location"><i class="fas fa-map-marker-alt"></i>Manhattan, NY</p>
+            <div class="row-meta"><span><i class="fas fa-bed"></i>3 Beds</span><span><i class="fas fa-bath"></i>3 Baths</span><span><i class="fas fa-vector-square"></i>3,100 sqft</span></div>
+            <a href="#" class="row-btn">View Details</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="no-results" id="no-results">Koi property nahi mili — filters ko reset karke dobara try karein.</div>
+
+      <div class="listing-pagination">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- footer-sec -->
+ 
+ <section class="footer-sec">
+        <div class="container">
+            <div class="row footer-row-margin">
+                <div class="col-lg-4 col-sm-12 footer-content">
+                    <h2>Imperial Residencies</h2>
+                    <span>INTERNATIONAL REAL STATE</span>
+                    <P>Your connection to the finest homes and experiences no matter the destination or lifestyle.</P>
+                    <h3>NEVER MISS A MOMENT OF LUXURY</h3>
+                    <div class="footer-social-links   gap-4">
+                        <a href="https://github.com/aiman-malik87" target="_blank"><i
+                                class="fa-brands fa-github text-light fs-2"></i></a>
+                        <a href="#" target="_blank"> <i class="fa-brands fa-instagram text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-tiktok text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook-f text-light fs-2"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 col-sm-12 footer-img">
+                    <img src="assests/footer img.avif" class="img-fluid" alt="footer img">
+                </div>
+            </div>
+
+            <div class="row footer-sec2 g-4">
+                <div class="col-12 footer-social-links">
+                    <a href="advisors.html">Advisors</a>
+                    <a href="listing.html">All Listings</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="neighboured.html">Neighboured</a>
+                    <a href="sell.html">Sell Us</a>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row footer-bottom">
+
+                <div class="col-lg-12 text-center">
+                    <h3 class="footer-bottom-heading">Imperial Residencies</h3>
+                    <p class="copyright">
+                        © 2026 Imperial Residencies. All Rights Reserved.
+                        Each office is independently owned and operated.
+                    </p>
+
+                    <p class="disclaimer">
+                        All information presented on this website is believed to be accurate and reliable.
+                        However, property details, pricing, availability, and specifications are subject
+                        to change without prior notice. Imperial Residencies makes no representation or
+                        warranty regarding the completeness or accuracy of the information provided and
+                        recommends independent verification before making any property decisions.
+                    </p>
+
+                    <p class="policy">
+                        Imperial Residencies is committed to providing equal housing opportunities and
+                        maintaining the highest standards of professionalism, transparency, and client service.
+                    </p>
+
+                    <div class="footer-icons">
+                        <i class="fa-solid fa-house"></i>
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                </div>
+                <a href="#" class="scroll-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+<script>
+function applyFilters(){
+  const search = document.getElementById('f-search').value.trim().toLowerCase();
+  const type = document.querySelector('input[name="ftype"]:checked').value;
+  const status = document.querySelector('input[name="fstatus"]:checked').value;
+  const priceRange = document.getElementById('f-price').value;
+  const minBeds = parseInt(document.getElementById('f-beds').value, 10);
+  const sort = document.getElementById('f-sort').value;
+
+  let minPrice = 0, maxPrice = Infinity;
+  if(priceRange){
+    const parts = priceRange.split('-');
+    minPrice = parseInt(parts[0], 10);
+    maxPrice = parseInt(parts[1], 10);
+  }
+
+  const container = document.getElementById('listing-container');
+  const rows = Array.from(container.querySelectorAll('.listing-row'));
+  let visibleCount = 0;
+
+  rows.forEach(row => {
+    const rType = row.dataset.type;
+    const rStatus = row.dataset.status;
+    const rPrice = parseInt(row.dataset.price, 10);
+    const rBeds = parseInt(row.dataset.beds, 10);
+    const rLocation = row.dataset.location;
+
+    const matches =
+      (!search || rLocation.includes(search)) &&
+      (!type || rType === type) &&
+      (!status || rStatus === status) &&
+      (rPrice >= minPrice && rPrice <= maxPrice) &&
+      (rBeds >= minBeds);
+
+    row.classList.toggle('is-hidden', !matches);
+    if(matches) visibleCount++;
+  });
+
+  if(sort === 'asc' || sort === 'desc'){
+    const visibleRows = rows.filter(r => !r.classList.contains('is-hidden'));
+    visibleRows.sort((a, b) => {
+      const pa = parseInt(a.dataset.price, 10);
+      const pb = parseInt(b.dataset.price, 10);
+      return sort === 'asc' ? pa - pb : pb - pa;
+    });
+    visibleRows.forEach(r => container.appendChild(r));
+  }
+
+  document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+  document.getElementById('results-text').textContent = 'Showing ' + visibleCount + ' of ' + rows.length + ' properties';
+  document.getElementById('listing-count-text').textContent = visibleCount + ' residences currently available';
+}
+
+function resetFilters(){
+  document.getElementById('f-search').value = '';
+  document.querySelector('input[name="ftype"][value=""]').checked = true;
+  document.querySelector('input[name="fstatus"][value=""]').checked = true;
+  document.getElementById('f-price').value = '';
+  document.getElementById('f-beds').value = '0';
+  document.getElementById('f-sort').value = 'default';
+  applyFilters();
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
