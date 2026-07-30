@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Browse all luxury properties currently available"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Journal Article - Imperial Residencies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg">
+  <div class="container-fluid">
+    <img src="logo.png" alt="Logo" width="160" height="90" class="d-inline-block align-text-top mx-5">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+       <li class="nav-item dropdown">
+                        <a class="nav-link text-black" href="properties.html">
+                            Properties
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="listing.html">All Listings</a></li>
+                            <li><a class="dropdown-item" href="privatecollection.html">Private Collection
+                                    (off-market)</a></li>
+                            <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
+                        </ul>
+                    </li>
+        <li class="nav-item"><a class="nav-link text-black" href="neighboured.html">Neighborhoods</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="advisors.html">Advisors</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="journal.html">Journal</a></li>
+      </ul>
+      <a href="contact.html" class="nav-btn mx-3">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- =========================
+      ARTICLE HERO (image set via JS)
+========================= -->
+
+<section class="detail-hero">
+
+  <div class="container text-center">
+
+    <p class="detail-breadcrumb" id="articleBreadcrumb"></p>
+
+    <p class="journal-small-title">IMPERIAL RESIDENCIES JOURNAL</p>
+
+    <h1 id="articleTitle"></h1>
+
+    <p class="detail-category-pill" id="articleCategory"></p>
+
+    <div class="detail-meta" id="articleMeta"></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+      ARTICLE CONTENT
+========================= -->
+
+<section class="article-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+
+        <img id="articleImage" class="detail-image" alt="">
+
+        <div class="article-content">
+
+          <p id="articleDescription"></p>
+
+          <p>
+            Luxury real estate is more than just a property.
+            It represents architecture, lifestyle and a vision
+            of extraordinary living. Every residence tells a
+            unique story through its design and location.
+          </p>
+
+          <p>
+            At Imperial Residencies, we explore the world's
+            most exceptional homes, discovering the ideas
+            behind their creation and the people who bring
+            them to life.
+          </p>
+
+          <div class="detail-actions">
+            <a href="journal.html" class="detail-back-btn">
+              <i class="fa-solid fa-arrow-left"></i> Back To Journal
+            </a>
+            <a href="properties.html" class="lux-btn">
+              Explore Properties
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+      RELATED STORIES
+========================= -->
+
+<section class="related-section py-5" id="relatedSection">
+  <div class="container">
+
+    <div class="featured-heading-wrap">
+      <span class="featured-subtitle">Continue Reading</span>
+      <h2 class="featured-heading">More Stories You May Like</h2>
+    </div>
+
+    <div class="row g-4" id="relatedContainer"></div>
+
+  </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="journal-detail.js"></script>
+
+</body>
+</html>

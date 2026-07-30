@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Browse all luxury properties currently available"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Journal - Imperial Residencies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg">
+  <div class="container-fluid">
+    <img src="logo.png" alt="Logo" width="160" height="90" class="d-inline-block align-text-top mx-5">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+                        <a class="nav-link text-black" href="properties.html">
+                            Properties
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="listing.html">All Listings</a></li>
+                            <li><a class="dropdown-item" href="privatecollection.html">Private Collection
+                                    (off-market)</a></li>
+                            <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
+                        </ul>
+                    </li>
+        <li class="nav-item"><a class="nav-link text-black" href="neighboured.html">Neighborhoods</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="advisors.html">Advisors</a></li>
+        <li class="nav-item"><a class="nav-link text-black" href="journal.html">Journal</a></li>
+      </ul>
+      <a href="contact.html" class="nav-btn mx-3">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- =========================
+        JOURNAL HERO
+========================= -->
+
+<section class="journal-hero">
+
+    <div class="container">
+
+        <span class="journal-small-title">
+               Luxury Real Estate Journal
+        </span>
+
+        <h1>Insights, Market Trends & Luxury Living</h1>
+
+        <p class="hero-text">
+            Explore expert articles, investment advice, interior inspiration,
+            luxury lifestyle stories, and the latest real estate market updates.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+        JOURNAL CONTENT
+========================= -->
+
+<section class="journal-content py-5">
+<div class="container">
+
+  <!-- Search -->
+  <div class="journal-search-box mb-4">
+    <div class="journal-search-wrapper">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" id="searchJournal" placeholder="Search luxury stories...">
+    </div>
+  </div>
+
+  <!-- Category Buttons + Bookmark filter -->
+  <div class="category-buttons text-center mb-4">
+    <button data-category="all" class="active" onclick="filterJournal('all')">All</button>
+    <button data-category="Architecture" onclick="filterJournal('Architecture')">Architecture</button>
+    <button data-category="Design" onclick="filterJournal('Design')">Design</button>
+    <button data-category="Lifestyle" onclick="filterJournal('Lifestyle')">Lifestyle</button>
+    <button id="bookmarkFilter" class="bookmark-filter-btn">
+      <i class="fa-solid fa-bookmark"></i> Saved
+    </button>
+  </div>
+
+  <!-- Toolbar: results count + sort -->
+  <div class="journal-toolbar d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+    <span id="resultsText" class="results-text">Showing stories</span>
+    <select id="sortJournal" class="journal-sort-select">
+      <option value="newest">Newest First</option>
+      <option value="oldest">Oldest First</option>
+      <option value="az">Title: A to Z</option>
+      <option value="za">Title: Z to A</option>
+    </select>
+  </div>
+
+  <!-- Dynamic Cards Container -->
+  <div class="row g-4" id="journalContainer"></div>
+
+  <!-- No results -->
+  <div class="no-results" id="noResults" style="display:none;">
+    <i class="fa-solid fa-magnifying-glass-minus mb-3" style="font-size:32px;color:#c9ac77;"></i>
+    <p>No stories match your search. Try a different keyword or filter.</p>
+  </div>
+
+  <!-- Pagination -->
+  <div class="listing-pagination" id="journalPagination"></div>
+
+</div>
+</section>
+
+
+<!-- =========================
+        LUXURY QUOTE
+========================= -->
+
+<section class="journal-banner">
+  <div class="container text-center">
+    <h2>Luxury Is A Way Of Living</h2>
+    <p>Explore stories from the world of exceptional real estate.</p>
+  </div>
+</section>
+
+<!-- footer sec -->
+  <section class="footer-sec">
+        <div class="container">
+            <div class="row footer-row-margin">
+                <div class="col-lg-4 col-sm-12 footer-content">
+                    <h2>Imperial Residencies</h2>
+                    <span>INTERNATIONAL REAL STATE</span>
+                    <P>Your connection to the finest homes and experiences no matter the destination or lifestyle.</P>
+                    <h3>NEVER MISS A MOMENT OF LUXURY</h3>
+                    <div class="footer-social-links   gap-4">
+                        <a href="https://github.com/aiman-malik87" target="_blank"><i
+                                class="fa-brands fa-github text-light fs-2"></i></a>
+                        <a href="#" target="_blank"> <i class="fa-brands fa-instagram text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-tiktok text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in text-light fs-2"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook-f text-light fs-2"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 col-sm-12 footer-img">
+                    <img src="assests/footer img.avif" class="img-fluid" alt="footer img">
+                </div>
+            </div>
+
+            <div class="row footer-sec2 g-4">
+                <div class="col-12 footer-social-links">
+                    <a href="advisors.html">Advisors</a>
+                    <a href="listing.html">All Listings</a>
+                    <a href="journal.html">Journal</a>
+                    <a href="neighboured.html">Neighboured</a>
+                    <a href="sell.html">Sell Us</a>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="row footer-bottom">
+
+                <div class="col-lg-12 text-center">
+                    <h3 class="footer-bottom-heading">Imperial Residencies</h3>
+                    <p class="copyright">
+                        © 2026 Imperial Residencies. All Rights Reserved.
+                        Each office is independently owned and operated.
+                    </p>
+
+                    <p class="disclaimer">
+                        All information presented on this website is believed to be accurate and reliable.
+                        However, property details, pricing, availability, and specifications are subject
+                        to change without prior notice. Imperial Residencies makes no representation or
+                        warranty regarding the completeness or accuracy of the information provided and
+                        recommends independent verification before making any property decisions.
+                    </p>
+
+                    <p class="policy">
+                        Imperial Residencies is committed to providing equal housing opportunities and
+                        maintaining the highest standards of professionalism, transparency, and client service.
+                    </p>
+
+                    <div class="footer-icons">
+                        <i class="fa-solid fa-house"></i>
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                </div>
+                <a href="#" class="scroll-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+
+            </div>
+        </div>
+
+    </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -92,13 +92,14 @@
                         <a class="nav-link active text-black" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-black" href="properties.html" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link text-black" href="properties.html">
                             Properties
                         </a>
+
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="listing.html">All Listings</a></li>
-                            <li><a class="dropdown-item" href="privatecollection.html">Private Collection (off-market)</a></li>
+                            <li><a class="dropdown-item" href="privatecollection.html">Private Collection
+                                    (off-market)</a></li>
                             <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
                         </ul>
                     </li>
@@ -138,11 +139,8 @@
                 <p>Luxury Homes • Exclusive Villas • Prime Investments</p>
 
                 <div class="search-box">
-
-                    <input type="text" placeholder="Search Luxury Properties">
-
-                    <button>Search</button>
-
+                    <input type="text" id="searchInput" placeholder="Search Luxury Properties">
+                    <button id="searchBtn">Search</button>
                 </div>
 
             </div>
@@ -991,7 +989,39 @@
 
 
 
+    <script>const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
 
+        function searchProperties() {
+
+            const value = searchInput.value.toLowerCase().trim();
+
+            const cards = document.querySelectorAll(".property-card");
+
+            cards.forEach(card => {
+
+                const cardText = card.textContent.toLowerCase();
+
+                if (cardText.includes(value) || value === "") {
+                    card.parentElement.style.display = "block";
+                } else {
+                    card.parentElement.style.display = "none";
+                }
+
+            });
+        }
+
+        searchBtn.addEventListener("click", searchProperties);
+
+        searchInput.addEventListener("keyup", function (e) {
+
+            searchProperties(); // type karte hi search hoga
+
+            if (e.key === "Enter") {
+                e.preventDefault();
+            }
+
+        });</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>

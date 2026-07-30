@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Browse all luxury properties currently available" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>All Listings - Imperial Residencies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg">
+        <div class="container-fluid">
+            <img src="logo.png" alt="Logo" width="160" height="90" class="d-inline-block align-text-top mx-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-black" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-black" href="properties.html">
+                            Properties
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="listing.html">All Listings</a></li>
+                            <li><a class="dropdown-item" href="privatecollection.html">Private Collection
+                                    (off-market)</a></li>
+                            <li><a class="dropdown-item" href="sell.html">Sell With Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-black" href="neighboured.html">Neighborhoods</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="advisors.html">Advisors</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="journal.html">Journal</a></li>
+                </ul>
+                <a href="contact.html" class="nav-btn mx-3">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- ===========================
+PROPERTY DETAILS HERO
+=========================== -->
+
+    <section class="property-details-hero">
+
+        <div class="property-details-overlay"></div>
+
+        <div class="container">
+
+            <div class="property-details-heading">
+
+                <span class="property-details-tag" id="propertyStatus">
+                    FOR SALE
+                </span>
+
+                <h1 id="propertyTitle">
+                    Clifton Seafront Villa
+                </h1>
+
+                <p class="property-details-location">
+                    <i class="fas fa-location-dot"></i>
+
+                    <span id="propertyLocation">
+                        Clifton, Karachi
+                    </span>
+
+                </p>
+
+                <h2 class="property-details-price" id="propertyPrice">
+                    $2,450,000
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ===========================
+IMAGE GALLERY
+=========================== -->
+
+    <section class="property-gallery">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8">
+
+                    <img id="mainImage" src="assests/listing img/clifton villa.jfif"
+                        class="img-fluid property-main-image" alt="">
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="property-thumbnails">
+
+                        <img class="thumb active-thumb" src="assests/listing img/clifton villa.jfif"
+                            onclick="changeImage(this)">
+
+                        <img class="thumb" src="assests/listing img/waterfront-villa.jpg" onclick="changeImage(this)">
+
+                        <img class="thumb" src="assests/listing img/penthouse.jfif" onclick="changeImage(this)">
+
+                        <img class="thumb" src="assests/listing img/skylinee penthouse.webp"
+                            onclick="changeImage(this)">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- ===========================
+PROPERTY OVERVIEW
+=========================== -->
+
+    <section class="property-overview">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8">
+
+                    <h2 class="property-section-title">
+                        Overview
+                    </h2>
+
+                    <p class="property-description" id="propertyDescription">
+
+                        Experience luxury living in one of Karachi's most prestigious
+                        locations.
+
+                        This stunning waterfront residence offers breathtaking sea
+                        views, spacious interiors, premium imported finishes, private
+                        gardens, and world-class amenities designed for modern family
+                        living.
+
+                        Every room has been carefully designed to maximize natural
+                        light while maintaining elegance and comfort.
+
+                    </p>
+
+                    <div class="property-features">
+
+                        <div class="feature-box">
+
+                            <i class="fas fa-bed"></i>
+
+                            <h4 id="propertyBeds">
+                                5
+                            </h4>
+
+                            <p>Bedrooms</p>
+
+                        </div>
+
+
+                        <div class="feature-box">
+
+                            <i class="fas fa-bath"></i>
+
+                            <h4 id="propertyBaths">
+                                6
+                            </h4>
+
+                            <p>Bathrooms</p>
+
+                        </div>
+
+
+                        <div class="feature-box">
+
+                            <i class="fas fa-vector-square"></i>
+
+                            <h4 id="propertyArea">
+                                6200 sqft
+                            </h4>
+
+                            <p>Area</p>
+
+                        </div>
+
+
+                        <div class="feature-box">
+
+                            <i class="fas fa-car"></i>
+
+                            <h4 id="propertyGarage">
+                                4
+                            </h4>
+
+                            <p>Garage</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="col-lg-4">
+
+                    <div class="property-side-card">
+
+                        <h3>
+
+                            Property Highlights
+
+                        </h3>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                Private Swimming Pool
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                Smart Home Technology
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                Italian Kitchen
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                Luxury Interior
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                Sea Facing
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                24/7 Security
+
+                            </li>
+
+                            <li>
+
+                                <i class="fas fa-check"></i>
+
+                                Private Elevator
+
+                            </li>
+
+                        </ul>
+
+                        <a href="#contactAgent" class="property-contact-btn">
+
+                            Schedule Private Tour
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ===================================
+PROPERTY AMENITIES
+=================================== -->
+
+    <section class="property-amenities">
+
+        <div class="container">
+
+            <h2 class="property-section-title text-center">
+                Luxury Amenities
+            </h2>
+
+            <div class="row mt-5">
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-water-ladder"></i>
+                        <h5>Swimming Pool</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h5>Fitness Center</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-car"></i>
+                        <h5>Private Parking</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-shield-halved"></i>
+                        <h5>24/7 Security</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-wifi"></i>
+                        <h5>High Speed WiFi</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-tree"></i>
+                        <h5>Private Garden</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-film"></i>
+                        <h5>Home Theater</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="amenity-card">
+                        <i class="fas fa-elevator"></i>
+                        <h5>Private Elevator</h5>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================
+PROPERTY DETAILS
+=================================== -->
+
+    <section class="property-information">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <h2 class="property-section-title">
+                        Interior Features
+                    </h2>
+
+                    <ul class="property-list">
+
+                        <li>✔ Imported Italian Marble Flooring</li>
+
+                        <li>✔ Double Height Living Room</li>
+
+                        <li>✔ Designer Kitchen</li>
+
+                        <li>✔ Walk-in Closets</li>
+
+                        <li>✔ Smart Home Automation</li>
+
+                        <li>✔ Premium Wooden Flooring</li>
+
+                        <li>✔ Luxury Bathrooms</li>
+
+                        <li>✔ Central Air Conditioning</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <h2 class="property-section-title">
+
+                        Exterior Features
+
+                    </h2>
+
+                    <ul class="property-list">
+
+                        <li>✔ Infinity Swimming Pool</li>
+
+                        <li>✔ Landscaped Garden</li>
+
+                        <li>✔ Outdoor BBQ Area</li>
+
+                        <li>✔ Beach Access</li>
+
+                        <li>✔ Rooftop Terrace</li>
+
+                        <li>✔ Guest Parking</li>
+
+                        <li>✔ CCTV Surveillance</li>
+
+                        <li>✔ Electric Gate</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================
+FLOOR PLAN
+=================================== -->
+
+    <section class="floor-plan">
+
+        <div class="container">
+
+            <h2 class="property-section-title text-center">
+                Floor Plan
+            </h2>
+
+            <div class="text-center mt-5">
+
+                <img src="assests/floorplan.png" class="img-fluid floor-plan-image" alt="Floor Plan">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================
+LOCATION MAP
+=================================== -->
+
+    <section class="property-map">
+
+        <div class="container">
+
+            <h2 class="property-section-title text-center">
+                Property Location
+            </h2>
+
+            <div class="ratio ratio-16x9 mt-4">
+
+                <iframe src="https://www.google.com/maps?q=Clifton+Karachi&output=embed" allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================
+VIDEO TOUR
+=================================== -->
+
+    <section class="property-video">
+
+        <div class="container">
+
+            <h2 class="property-section-title text-center">
+                Property Video Tour
+            </h2>
+
+            <div class="ratio ratio-16x9 mt-5">
+
+                <iframe src="https://www.youtube.com/embed/Scxs7L0vhZ4" allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================
+PROPERTY AGENT
+========================== -->
+
+    <section class="property-agent py-5" id="contactAgent">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-4">
+
+                    <div class="agent-card">
+
+                        <img src="assests/agent.jpg" class="img-fluid rounded-circle mb-4" alt="Agent">
+
+                        <h3>Sarah Ahmed</h3>
+
+                        <p class="text-muted">
+                            Senior Luxury Property Advisor
+                        </p>
+
+                        <hr>
+
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            +92 300 1234567
+                        </p>
+
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            sarah@imperial.com
+                        </p>
+
+                        <p>
+                            <i class="fas fa-award"></i>
+                            15+ Years Experience
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="contact-form-box">
+
+                        <h2 class="property-section-title">
+                            Schedule a Private Tour
+                        </h2>
+
+                        <form>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <input type="date" class="form-control">
+                                </div>
+
+                                <div class="col-12 mb-3">
+
+                                    <textarea rows="6" class="form-control" placeholder="Write your message"></textarea>
+
+                                </div>
+
+                                <div class="col-12">
+
+                                    <button class="property-contact-btn">
+
+                                        Send Inquiry
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ==========================
+SIMILAR PROPERTIES
+========================== -->
+
+    <section class="similar-properties py-5">
+
+        <div class="container">
+
+            <h2 class="property-section-title text-center mb-5">
+
+                Similar Properties
+
+            </h2>
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <div class="property-card">
+
+                        <img src="assests/listing img/penthouse.jfif" class="img-fluid">
+
+                        <div class="property-card-body">
+
+                            <h4>DHA Skyline Penthouse</h4>
+
+                            <p>$3,150,000</p>
+
+                            <a href="property-details.html?id=2" class="property-contact-btn">
+
+                                View Details
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-4">
+
+                    <div class="property-card">
+
+                        <img src="assests/listing img/waterfront-villa.jpg" class="img-fluid">
+
+                        <div class="property-card-body">
+
+                            <h4>Waterfront Boutique Villa</h4>
+
+                            <p>$5,120,000</p>
+
+                            <a href="property-details.html?id=3" class="property-contact-btn">
+
+                                View Details
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-4">
+
+                    <div class="property-card">
+
+                        <img src="assests/listing img/clifton villa.jfif" class="img-fluid">
+
+                        <div class="property-card-body">
+
+                            <h4>Grand Garden Estate</h4>
+
+                            <p>$8,750,000</p>
+
+                            <a href="property-details.html?id=4" class="property-contact-btn">
+
+                                View Details
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================
+CALL TO ACTION
+========================== -->
+
+    <section class="property-cta">
+
+        <div class="container text-center">
+
+            <h2>
+
+                Looking for Your Dream Home?
+
+            </h2>
+
+            <p>
+
+                Our luxury property advisors are ready to help you
+                find the perfect residence.
+
+            </p>
+
+            <a href="contact.html" class="property-contact-btn">
+
+                Contact Our Team
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="property-detail.js"></script>
+
+</body>
+
+</html>
